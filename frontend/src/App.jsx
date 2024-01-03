@@ -1,39 +1,19 @@
-import { useEffect, useState } from 'react'
+import Footer from "./Footer";
+import Header from "./Header";
+import Contact from "./ContactUs";
+import About from "./AboutUs";
+import Home from "./Home";
 
 
-import axios from 'axios'
+function App(){
 
-function App() {
-  const [jokes, setJokes] = useState([])
+    const [count,setCount] = useState(0);
 
-  useEffect(()=>{
-    axios.get('/api/jokes')
-    .then((res)=>{
-      console.log(res.data)
-      setJokes(res.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  })
-
-  return (
-    <>
-    <h1>Full Stack</h1>
-    <p>JOKES : {jokes.length}</p>
-    {   
-      jokes.map((joke,index )=>(
-
-        <div  key={joke.id}>  
-        <h2>{joke.category}</h2>
-        <br></br>
-        <h3>{joke.question}</h3>
-        <h3>{joke.answer}</h3>
-        </div>
-      ))
-    }
-      </>
-  )
+    return (
+        <>
+        <Header/>
+        <Home/>
+        <Footer/>
+        </>
+    )
 }
-
-export default App
