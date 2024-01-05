@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import UserContext from "./UserContext";
+import UserContext from "./UserContext.jsx";
 
 //  <React.createContext().Provider value = {{user,userState}}>
 

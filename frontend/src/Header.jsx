@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link,NavLink} from 'react-router-dom' 
-// Link used insted of 'a' tag is not used cause it refresh page reload
+// Link used insted of 'a' tag is not used cause it refresh ,page reload
 
 
 export default function Header() {
@@ -22,6 +22,7 @@ export default function Header() {
                         >
                             Log in
                         </Link>
+
                         <Link
                             to="#"
                             className="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
